@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: 250 250 250;
+    --color-bg-secondary: 255 255 255;
+    --color-bg-tertiary: 245 245 247;
+    --color-text-primary: 17 24 39;
+    --color-text-secondary: 75 85 99;
+    --color-text-tertiary: 156 163 175;
+    --color-accent: 239 68 68;
+    --color-accent-hover: 220 38 38;
+    --color-border: 229 231 235;
+    --color-card: 255 255 255;
+    --color-card-hover: 249 250 251;
+  }
+
+  .dark {
+    --color-bg-primary: 17 24 39;
+    --color-bg-secondary: 31 41 55;
+    --color-bg-tertiary: 55 65 81;
+    --color-text-primary: 243 244 246;
+    --color-text-secondary: 209 213 219;
+    --color-text-tertiary: 156 163 175;
+    --color-accent: 248 113 113;
+    --color-accent-hover: 239 68 68;
+    --color-border: 55 65 81;
+    --color-card: 31 41 55;
+    --color-card-hover: 55 65 81;
+  }
+
+  body {
+    @apply bg-[rgb(var(--color-bg-primary))] text-[rgb(var(--color-text-primary))] transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
